@@ -1,0 +1,14 @@
+{
+  "name": "minimalista",
+  "version": "1.0.0",
+  "description": "Another minimalist theme, but without external dependencies",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch scss/:static/css"
+  },
+  "author": "Davi Alexandre",
+  "license": "MIt",
+  "devDependencies": {
+    "sass": "^1.24.3"
+  }
+}

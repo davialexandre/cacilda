@@ -1,0 +1,30 @@
+{{ partial "head" . }}
+<body class="single-page">
+
+<header class="page-header">
+    <h1 class="site-title"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+    <nav class="site-navigation">
+            <a class="navigation-item" href="">Blog</a>
+            <a class="navigation-item" href="">About</a>
+            <a class="navigation-item" href="">Setup</a>
+    </nav>
+</header>
+<article class="blog-post">
+    <header class="post-header">
+        <h1 class="post-title">{{ .Title }}</h1>
+        <aside class="post-details">
+            <p class="publish-date">Published on <time datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "January 2, 2006"}}</time></p>
+            <section class="post-tags">
+                {{ range .Params.tags }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" class="post-tag">{{ . }}</a>
+                {{ end }}
+            </section>
+        </aside>
+    </header>
+    <section class="post-content">
+        {{ .Content }}
+    </section>
+</article>
+
+</body>
+</html>

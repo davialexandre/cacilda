@@ -1,0 +1,9 @@
+{{ partial "head" . }}
+    <body class="front-page">
+        <section id="about">
+            <h1 class="greeting">Hello! I'm {{ .Site.Author.name }}</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+            <p>Contact me on <a href="{{ .Site.Params.twitter }}">Twitter</a> or by <a href="mailto:{{ .Site.Params.Social.Email }}">email</a>.</p>
+        </section>
+    </body>
+</html>
